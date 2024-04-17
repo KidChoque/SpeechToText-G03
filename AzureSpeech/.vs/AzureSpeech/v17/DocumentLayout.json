@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\controllers\\speechcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\controllers\\speechcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\repository\\azurespeechrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\repository\\azurespeechrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\services\\speechtotextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\services\\speechtotextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\services\\texttospeechservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\services\\texttospeechservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\interfaces\\ispeechrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\interfaces\\ispeechrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|c:\\users\\42634177801\\desktop\\azurespeech\\azurespeech\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0E7264-53A9-4F3D-829A-65280A4374A9}|AzureSpeech\\AzureSpeech.csproj|solutionrelative:azurespeech\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "AzureSpeech\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Properties\\launchSettings.json",
+              "RelativeToolTip": "AzureSpeech\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-17T13:14:22.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpeechToTextService.cs",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Services\\SpeechToTextService.cs",
+              "RelativeDocumentMoniker": "AzureSpeech\\Services\\SpeechToTextService.cs",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Services\\SpeechToTextService.cs",
+              "RelativeToolTip": "AzureSpeech\\Services\\SpeechToTextService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:34:22.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TextToSpeechService.cs",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Services\\TextToSpeechService.cs",
+              "RelativeDocumentMoniker": "AzureSpeech\\Services\\TextToSpeechService.cs",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Services\\TextToSpeechService.cs",
+              "RelativeToolTip": "AzureSpeech\\Services\\TextToSpeechService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:34:22.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AzureSpeechRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Repository\\AzureSpeechRepository.cs",
+              "RelativeDocumentMoniker": "AzureSpeech\\Repository\\AzureSpeechRepository.cs",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Repository\\AzureSpeechRepository.cs",
+              "RelativeToolTip": "AzureSpeech\\Repository\\AzureSpeechRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:34:22.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\appsettings.json",
+              "RelativeDocumentMoniker": "AzureSpeech\\appsettings.json",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\appsettings.json",
+              "RelativeToolTip": "AzureSpeech\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-17T11:34:22.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISpeechRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Interfaces\\ISpeechRepository.cs",
+              "RelativeDocumentMoniker": "AzureSpeech\\Interfaces\\ISpeechRepository.cs",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Interfaces\\ISpeechRepository.cs",
+              "RelativeToolTip": "AzureSpeech\\Interfaces\\ISpeechRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:34:22.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpeechController.cs",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Controllers\\SpeechController.cs",
+              "RelativeDocumentMoniker": "AzureSpeech\\Controllers\\SpeechController.cs",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Controllers\\SpeechController.cs",
+              "RelativeToolTip": "AzureSpeech\\Controllers\\SpeechController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwDUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:34:22.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Program.cs",
+              "RelativeDocumentMoniker": "AzureSpeech\\Program.cs",
+              "ToolTip": "C:\\Users\\42634177801\\Desktop\\AzureSpeech\\AzureSpeech\\Program.cs",
+              "RelativeToolTip": "AzureSpeech\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:34:22.917Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

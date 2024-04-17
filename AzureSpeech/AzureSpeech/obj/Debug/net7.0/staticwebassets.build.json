@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aoT5Y+GlIk79FmZ0cRisNImWk1SYqsEC6eHpPTyaIAs=",
+  "Source": "AzureSpeech",
+  "BasePath": "_content/AzureSpeech",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

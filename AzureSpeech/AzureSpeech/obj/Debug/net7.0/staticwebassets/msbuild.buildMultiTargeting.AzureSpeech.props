@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AzureSpeech.props" />
+</Project>
