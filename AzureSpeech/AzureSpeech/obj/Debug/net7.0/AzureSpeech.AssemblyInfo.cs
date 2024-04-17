@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzureSpeech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26d8f3b32765936f5e78ad64588b29af7a4e4ddf")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzureSpeech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzureSpeech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
