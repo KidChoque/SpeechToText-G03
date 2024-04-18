@@ -10,49 +10,84 @@ namespace AzureSpeech.Controllers
     [ApiController]
     public class SpeechController : ControllerBase
     {
-        private readonly SpeechToTextService _speechToTextService;
-        private readonly TextToSpeechService _textToSpeechService;
 
-        public SpeechController(SpeechToTextService speechToTextService, TextToSpeechService textToSpeechService)
+        static string speechKey = "2d627ab8ba4649ab8e14fa94c85cc7aa";
+        static string speechRegion = "eastus";
+
+        [HttpPost("SpeechToText")]
+        public async Task<IActionResult> Post(IFormFile audio)
         {
-            _speechToTextService = speechToTextService;
-            _textToSpeechService = textToSpeechService;
+            var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
+            speechConfig.SpeechRecognitionLanguage = "pt-BR";
 
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> ConvertSpeechToTextAsync(IFormFile file)
-        {
-            if (file == null)
-                return BadRequest("Arquivo vazio ou não recebido.");
-
-            var _speechConfig = SpeechConfig.FromSubscription("4885e63be3fd4c25ac3a1e85c193169f", "brazilsouth");
-
-            using var stream = file.OpenReadStream();
-
-            var reader = new BinaryReader(stream);
-            using var audioConfigStream = AudioInputStream.CreatePushStream();
-            using var audioConfig = AudioConfig.FromStreamInput(audioConfigStream);
-
-            var recognizer = new SpeechRecognizer(_speechConfig, "pt-BR", audioConfig);
-
-            byte[] readBytes;
-            do
+            var file = Path.GetTempFileName();
+            using (var stream = new FileStream(file, FileMode.Create))
             {
-                readBytes = reader.ReadBytes(1024);
-                audioConfigStream.Write(readBytes, readBytes.Length);
-            } while (readBytes.Length > 0);
+                await audio.CopyToAsync(stream);
+            }
 
-            var text = await recognizer.RecognizeOnceAsync();
-            return Ok(text.Text);
+            using var audioConfig = AudioConfig.FromWavFileInput(file);
+            using var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
+
+            var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
+            var audioResult = OutputSpeechRecognitionResult(speechRecognitionResult);
+
+            return Ok(audioResult);
+
         }
 
-        [HttpPost("textToSpeech")]
-        public async Task<IActionResult> ConvertTextToSpeechAsync([FromBody] string text)
+
+        [HttpPost("TextToSpeech")]
+        public async Task<IActionResult> Post([FromForm] string text)
         {
-            var audioData = await _textToSpeechService.ConvertTextToSpeechAsync(text);
-            return File(audioData, "audio/wav");
+            var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
+
+            speechConfig.SpeechSynthesisVoiceName = "en-US-AvaMultilingualNeural";
+
+            using (var speechSynthesizer = new SpeechSynthesizer(speechConfig))
+            {
+
+                var speechSynthesisResult = await speechSynthesizer.SpeakTextAsync(text);
+
+                if (speechSynthesisResult.Reason == ResultReason.SynthesizingAudioCompleted)
+                {
+                    return File(speechSynthesisResult.AudioData, "audio/mpeg", "output.mp3");
+                }
+                else
+                {
+
+                    return BadRequest("Deu ruim");
+                }
+            }
+
+        }
+
+        static string OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
+        {
+            if (speechRecognitionResult.Reason == ResultReason.RecognizedSpeech)
+            {
+                return ($"{speechRecognitionResult.Text}");
+            }
+
+            else if (speechRecognitionResult.Reason == ResultReason.Canceled)
+            {
+                var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
+                return ($"CANCELED: Reason={cancellation.Reason}");
+
+            }
+            else if (speechRecognitionResult.Reason == ResultReason.Canceled)
+            {
+                var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
+                return ($"CANCELED: Reason={cancellation.Reason}");
+            }
+
+            else
+            {
+                return "Deu ruim";
+            }
         }
 
     }
+
+
 }

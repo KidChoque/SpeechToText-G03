@@ -2,19 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { AudioVisu, Box, BoxChat, BoxClose, BoxMic, ChatBox, Container, ContenChat, Content, ContentChat, ConvertText, Footer, Gif, Picture } from './Style';
 import { FontAwesome } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Nunito_600SemiBold, useFonts } from '@expo-google-fonts/nunito';
+import { Audio } from 'expo-av';
 
 export default function App() {
-
-  const [isClicked, setIsClicked] = useState()
-
-  const iconSize = isClicked ? 60 : 50;
-
   const [chatClicked, setChatClicked] = useState()
-
+  const [isClicked, setIsClicked] = useState()
+  const [sound, setSound] = useState();
+  const [recording, setRecording] = useState();
+  const [permissionResponse, requestPermission] = Audio.usePermissions();
+const iconSize = isClicked ? 60 : 50;
   const [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
   })
@@ -22,6 +22,68 @@ export default function App() {
     return null;
   }
 
+  // useEffect(() => {
+  //   return sound
+  //     ? () => {
+  //         console.log('Unloading Sound');
+  //         sound.unloadAsync();
+  //       }
+  //     : undefined;
+  // }, [sound]);
+
+
+  
+
+
+  async function startRecording() {
+    try {
+      if (permissionResponse.status !== 'granted') {
+        console.log('Requesting permission..');
+        await requestPermission();
+      }
+      await Audio.setAudioModeAsync({
+        allowsRecordingIOS: true,
+        playsInSilentModeIOS: true,
+      });
+      setIsClicked(true)
+
+      console.log('Starting recording..');
+      const { recording } = await Audio.Recording.createAsync( Audio.RecordingOptionsPresets.HIGH_QUALITY
+      );
+      setRecording(recording);
+      console.log('Recording started');
+    } catch (err) {
+      console.error('Failed to start recording', err);
+    }
+  }
+
+  async function stopRecording() {
+    console.log('Stopping recording..');
+    setRecording(undefined);
+    await recording.stopAndUnloadAsync();
+    await Audio.setAudioModeAsync(
+      {
+        allowsRecordingIOS: false,
+      }
+    );
+    setIsClicked(false)
+    const uri = recording.getURI();
+    console.log('Recording stopped and stored at', uri);
+  }
+
+  
+
+  async function playSound() {
+    console.log('Loading Sound');
+    const { sound } = await Audio.Sound.createAsync( 
+    );
+    setSound(sound);
+
+    console.log('Playing Sound');
+    await sound.playAsync();
+  }
+
+  
   
   return (
     <Container>
@@ -29,10 +91,10 @@ export default function App() {
         <AudioVisu>
           {
             isClicked ?
-              <Gif source={require("../speech-to-textG03/assets/gif.gif")} />
+              <Gif source={require("../front-end/assets/gif.gif")} />
               :
               <>
-                <Picture source={require("../speech-to-textG03/assets/logo.png")} />
+                <Picture source={require("../front-end/assets/logo.png")} />
               </>
           }
         </AudioVisu>
@@ -76,7 +138,7 @@ export default function App() {
                   :
                   <></>
               }
-              <Box onPress={() => setIsClicked(true)}>
+              <Box onPress={() => isClicked == true ? stopRecording() : startRecording()}>
                 <FontAwesome name="microphone"
                   size={iconSize} color="#c785f2" />
               </Box>
